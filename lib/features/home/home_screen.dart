@@ -348,6 +348,7 @@ class HomeScreenState extends State<HomeScreen> {
                                 ),
                                 Gap(8),
                                 CustomButton(
+                                  height: 41,
                                   child: Text(
                                     "Принять заказ",
                                     style: context.style.fontSize12Weight600

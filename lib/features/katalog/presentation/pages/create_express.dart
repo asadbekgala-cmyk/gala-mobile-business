@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gala_business/core/extension/extension.dart';
@@ -164,6 +163,7 @@ class _CreateExpressScreenState extends State<CreateExpressScreen> {
                                       "Далеко",
                                       style: context.style.fontSize12Weight600,
                                     ),
+
                                   ],
                                 ),
                               ),
@@ -176,6 +176,21 @@ class _CreateExpressScreenState extends State<CreateExpressScreen> {
                 ],
               ),
             ),
+       
+       Container( 
+         margin: EdgeInsets.only(top: 8),
+              padding: EdgeInsets.all(16),
+              width: double.maxFinite,
+              decoration: BoxDecoration(
+                color: context.colors.white,
+                borderRadius: BorderRadius.circular(16),
+              ),
+
+              child: Column( 
+                children: [ 
+                ],
+              )
+       )
           ],
         ),
       ),
