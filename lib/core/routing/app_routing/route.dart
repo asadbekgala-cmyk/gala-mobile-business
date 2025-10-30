@@ -10,6 +10,7 @@ import 'package:gala_business/features/home/home_screen.dart';
 import 'package:gala_business/features/home/presentation/pages/notification.dart';
 import 'package:gala_business/features/instrument/detail_screen.dart';
 import 'package:gala_business/features/katalog/catalog_screen.dart';
+import 'package:gala_business/features/katalog/presentation/pages/create_express.dart';
 import 'package:gala_business/features/navigation/navigation_screen.dart';
 import 'package:gala_business/main.dart';
 import 'package:go_router/go_router.dart';
@@ -72,6 +73,14 @@ class AppRouter {
                 path: AppRouteName().catalog,
                 name: AppRouteName().catalog,
                 builder: (context, state) => CatalogScreen(),
+                routes: [
+                  GoRoute(
+                    parentNavigatorKey: navigatorKey,
+                    path: AppRouteName().createExpress,
+                    name: AppRouteName().createExpress,
+                    builder: (context, state) => CreateExpressScreen(),
+                  ),
+                ],
               ),
             ],
           ),

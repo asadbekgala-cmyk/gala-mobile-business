@@ -106,6 +106,7 @@ class _NotificationScreenState extends State<NotificationScreen>
                         ),
                         Gap(4),
                         CustomButton(
+                          height: 41,
                           borderRadius: BorderRadius.circular(16),
                           color: context.colors.gray200,
                           child: Text(

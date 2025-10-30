@@ -16,6 +16,14 @@ class AppTheme {
       ),
       extensions: [
         AppFonts(
+          fontSize11Weight600: TextStyle(
+            fontFamily: "Raleway",
+            fontSize: 11,
+            fontWeight: FontWeight.w600,
+            color: colors.black,
+
+            fontFeatures: [const FontFeature.liningFigures()],
+          ),
           fontSize36Weight600: TextStyle(
             fontFamily: "Raleway",
             fontSize: 36,

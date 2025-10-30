@@ -40,7 +40,7 @@ class CustomButton extends StatelessWidget {
       behavior: HitTestBehavior.opaque,
       onTap: onTap,
       child: Container(
-        height: height?? 41,
+        height: height?? 54,
         width: width ?? double.maxFinite,
         alignment: alignment ?? Alignment.center,
         clipBehavior: clipBehavior,

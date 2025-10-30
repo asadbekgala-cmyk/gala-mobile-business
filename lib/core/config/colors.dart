@@ -7,8 +7,8 @@ class AppColors {
   final black300 = const Color(0xFF757686);
   final gray500 = const Color(0xFFADB5BD);
   final gray600 = const Color(0xFF6C757D);
-  final gray100 = const Color(0xFFF2F4F7);
-  final gray200 = const Color(0xFFE9ECEF);
+  final gray100 = const Color(0xFFF0F0F0);
+  final gray200 = const Color(0xFFEAEAEC);
   final gray300 = const Color(0xFFDEE2E6);
   final gray700 = const Color(0xFF595867);
   final gray50 = const Color(0xFFF9F9FA);

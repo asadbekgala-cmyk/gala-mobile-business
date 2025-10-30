@@ -49,6 +49,7 @@ class AppFonts extends ThemeExtension<AppFonts> {
   final TextStyle fontSize12Weight500;
   final TextStyle fontSize12Weight400;
   final TextStyle fontSize12Weight300;
+  final TextStyle fontSize11Weight600;
   final TextStyle fontSize10Weight400;
   final TextStyle fontSize8Weight400;
   final TextStyle fontSize7Weight600;
@@ -88,6 +89,7 @@ class AppFonts extends ThemeExtension<AppFonts> {
     required this.fontSize12Weight500,
     required this.fontSize12Weight400,
     required this.fontSize12Weight300,
+    required this.fontSize11Weight600,
     required this.fontSize10Weight400,
     required this.fontSize8Weight400,
     required this.fontSize7Weight600,
@@ -107,6 +109,7 @@ class AppFonts extends ThemeExtension<AppFonts> {
       return this;
     }
     return AppFonts(
+      fontSize11Weight600: fontSize11Weight600,
       fontSize36Weight600: fontSize36Weight600,
       fontSize12Weight600: fontSize12Weight600,
       fontSize13Weight400: fontSize13Weight400,
