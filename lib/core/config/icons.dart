@@ -4,6 +4,7 @@ class AppIcons {
   final detail =  "assets/icons/navigation/detail.svg";
   final catalog =  "assets/icons/navigation/katalog.svg";
   final orders =  "assets/icons/navigation/orders.svg";
+  final elementEqual =  "assets/icons/navigation/element_equal.svg";
 
 
 

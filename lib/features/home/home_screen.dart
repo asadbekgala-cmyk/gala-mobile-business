@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -475,6 +476,166 @@ class HomeScreenState extends State<HomeScreen> {
                           ),
                         ],
                       ),
+                    ),
+Gap(8),
+                    Container(
+                      height: 138,
+                      width: double.maxFinite,
+                      decoration: BoxDecoration(),
+                      child: LineChart(
+                        LineChartData(
+                          maxX: 6,
+                          minY: 0,
+                          maxY: 3,
+                          gridData: FlGridData(
+                            show: true,
+
+                            horizontalInterval: 1,
+                            verticalInterval: 1,
+                          ),
+                          titlesData: FlTitlesData(
+                            bottomTitles: AxisTitles(
+                              sideTitles: SideTitles(
+                                showTitles: true,
+                                getTitlesWidget: (value, meta) {
+                                  const months = [
+                                    'Jan',
+                                    'Feb',
+                                    'Mar',
+                                    'Apr',
+                                    'May',
+                                    'Jun',
+                                    'fgh',
+                                  ];
+                                  if (value.toInt() < months.length) {
+                                    return Padding(
+                                      padding: const EdgeInsets.only(top: 4.0),
+                                      child: Text(
+                                        months[value.toInt()],
+                                        textAlign: TextAlign.center,
+                                        style: const TextStyle(fontSize: 12),
+                                      ),
+                                    );
+                                  }
+                                  return const SizedBox.shrink();
+                                },
+                                interval: 1,
+                              ),
+                            ),
+                            rightTitles: AxisTitles(
+                              sideTitles: SideTitles(showTitles: false),
+                            ),
+                            topTitles: AxisTitles(
+                              sideTitles: SideTitles(showTitles: false),
+                            ),
+                            leftTitles: AxisTitles(
+                              sideTitles: SideTitles(
+                                interval: 1,
+                                showTitles: true,
+                                getTitlesWidget: (value, meta) {
+                                  return Text(
+                                    value.toInt().toString(),
+                                    style: context.style.fontSize12Weight400,
+                                  );
+                                },
+                              ),
+                            ),
+                          ),
+
+                          lineBarsData: [
+                            LineChartBarData(
+                              isCurved: true,
+                              color: Colors.blue,
+                              barWidth: 2,
+                              dotData: FlDotData(show: true),
+                              spots: const [
+                                FlSpot(0, 2),
+                                FlSpot(1, 1.8),
+                                FlSpot(2, 1.9),
+                                FlSpot(3, 2.4),
+                                FlSpot(4, 3),
+                                FlSpot(5, 2.8),
+                                FlSpot(6, 2.8),
+                                // FlSpot(6, ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Gap(8),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            height: 60,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 12,
+                              vertical: 8,
+                            ),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(16),
+                              color: context.colors.red.withOpacity(0.08),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text(
+                                  "Отмененный заказ",
+                                  style: context.style.fontSize14Weight600
+                                      .copyWith(color: context.colors.red),
+                                ),
+                                Gap(4),
+                                Text(
+                                  "1",
+                                  style: context.style.fontSize14Weight600
+                                      .copyWith(color: context.colors.red),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Gap(12),
+                        Expanded(
+                          child: Container(
+                            height: 60,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 12,
+                              vertical: 8,
+                            ),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(16),
+                              color: context.colors.gray100,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Text(
+                                      "Жалоба",
+                                      style: context.style.fontSize14Weight600,
+                                    ),
+                                    Gap(4),
+                                    Text(
+                                      "1",
+                                      style: context.style.fontSize14Weight600,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox( 
+                                  height: 20, 
+                                  width: 20,
+                                  child: SvgPicture.asset(context.icon.arrowCircleRight)),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),

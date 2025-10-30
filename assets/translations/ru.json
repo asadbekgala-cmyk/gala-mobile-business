@@ -1,3 +1,7 @@
-{ 
-    
+{
+     "katalog": "Каталог",
+  "buyurtmalar": "Заказы",
+  "asboblar": "Инструменты",
+  "boshqalar": "Другие",
+  "asosiy": "Главный"
 }
