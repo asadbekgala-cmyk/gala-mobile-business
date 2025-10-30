@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gala_business/core/extension/extension.dart';
+import 'package:gala_business/core/widgets/custom_button.dart';
 import 'package:gap/gap.dart';
 
 class CreateExpressScreen extends StatefulWidget {
@@ -163,7 +164,6 @@ class _CreateExpressScreenState extends State<CreateExpressScreen> {
                                       "Далеко",
                                       style: context.style.fontSize12Weight600,
                                     ),
-
                                   ],
                                 ),
                               ),
@@ -176,9 +176,9 @@ class _CreateExpressScreenState extends State<CreateExpressScreen> {
                 ],
               ),
             ),
-       
-       Container( 
-         margin: EdgeInsets.only(top: 8),
+
+            Container(
+              margin: EdgeInsets.only(top: 8),
               padding: EdgeInsets.all(16),
               width: double.maxFinite,
               decoration: BoxDecoration(
@@ -186,12 +186,204 @@ class _CreateExpressScreenState extends State<CreateExpressScreen> {
                 borderRadius: BorderRadius.circular(16),
               ),
 
-              child: Column( 
-                children: [ 
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Основная информация",
+                    style: context.style.fontSize16Weight700,
+                  ),
+                  Gap(8),
+                  TextField(
+                    cursorColor: context.colors.black,
+
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.all(12),
+                      fillColor: context.colors.gray100,
+                      filled: true,
+
+                      hintText: "Наименование товара",
+                      hintStyle: context.style.fontSize14Weight500.copyWith(
+                        color: context.colors.gray600,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide(color: context.colors.gray100),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide(color: context.colors.gray100),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide(color: context.colors.gray100),
+                      ),
+                    ),
+                  ),
+                  Gap(8),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: TextField(
+                          cursorColor: context.colors.black,
+
+                          decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(12),
+                            fillColor: context.colors.gray100,
+                            filled: true,
+
+                            hintText: "Цена",
+                            hintStyle: context.style.fontSize14Weight500
+                                .copyWith(color: context.colors.gray600),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                color: context.colors.gray100,
+                              ),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                color: context.colors.gray100,
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                color: context.colors.gray100,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Gap(8),
+                      Expanded(
+                        child: TextField(
+                          cursorColor: context.colors.black,
+
+                          decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(12),
+                            fillColor: context.colors.gray100,
+                            filled: true,
+
+                            hintText: "Цена со скидкой",
+                            hintStyle: context.style.fontSize14Weight500
+                                .copyWith(color: context.colors.gray600),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                color: context.colors.gray100,
+                              ),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                color: context.colors.gray100,
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                color: context.colors.gray100,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Gap(8),
+                  TextField(
+                    cursorColor: context.colors.black,
+
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.all(12),
+                      fillColor: context.colors.gray100,
+                      filled: true,
+
+                      hintText: "Количество готовых товаров",
+                      hintStyle: context.style.fontSize14Weight500.copyWith(
+                        color: context.colors.gray600,
+                      ),
+                      suffixText: "Шт",
+                      suffixStyle: context.style.fontSize14Weight500,
+                      // suffixIcon: Padding(
+                      //   padding: const EdgeInsets.all(16.0),
+                      //   child: Text("ta"),
+                      // ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide(color: context.colors.gray100),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide(color: context.colors.gray100),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide(color: context.colors.gray100),
+                      ),
+                    ),
+                  ),
+                  Gap(8),
+                  Container(
+                    padding: EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Color(0xFFE9ECEF),
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Продвигать",
+                          style: context.style.fontSize14Weight600,
+                        ),
+
+                        Container(
+                          height: 24,
+                          width: 40,
+                          padding: EdgeInsets.all(2),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: context.colors.black,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Container(
+                                height: 20,
+                                width: 20,
+                                padding: EdgeInsets.all(1),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: context.colors.white,
+                                ),
+                                // child: CircularProgressIndicator(
+                                //   color: context.colors.black,
+                                // ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
-              )
-       )
+              ),
+            ),
           ],
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: context.colors.white,
+        child: CustomButton(
+          child: Text(
+            "Добавить",
+            style: context.style.fontSize16Weight600.copyWith(
+              color: context.colors.white,
+            ),
+          ),
         ),
       ),
     );

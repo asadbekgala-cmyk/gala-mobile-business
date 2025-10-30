@@ -88,7 +88,8 @@ class CatalogScreenState extends State<CatalogScreen> {
                   Expanded(
                     child: SizedBox(
                       height: 48,
-                      child: TextField(
+                      child: 
+                      TextField(
                         cursorColor: context.colors.black,
 
                         decoration: InputDecoration(
@@ -486,24 +487,29 @@ class CreateProductModal extends StatelessWidget {
               ),
               Gap(13),
               Expanded(
-                child: Container(
-                  height: 141,
-                  decoration: BoxDecoration(
-                    color: context.colors.gray100.withOpacity(0.25),
-                    border: Border.all(color: context.colors.gray100),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Center(
-                    child: Column(
-                      children: [
-                        Gap(16),
-                        Text(
-                          "Обычного товара",
-                          style: context.style.fontSize14Weight600,
-                        ),
-                        Gap(25),
-                        SvgPicture.asset(context.icon.box),
-                      ],
+                child: GestureDetector(
+                  onTap: () {
+                    context.pushNamed(context.route.createOddiy);
+                  },
+                  child: Container(
+                    height: 141,
+                    decoration: BoxDecoration(
+                      color: context.colors.gray100.withOpacity(0.25),
+                      border: Border.all(color: context.colors.gray100),
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Gap(16),
+                          Text(
+                            "Обычного товара",
+                            style: context.style.fontSize14Weight600,
+                          ),
+                          Gap(25),
+                          SvgPicture.asset(context.icon.box),
+                        ],
+                      ),
                     ),
                   ),
                 ),

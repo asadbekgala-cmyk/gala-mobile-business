@@ -18,5 +18,7 @@ class AppRouteName {
 
   final catalog = '/catalog';
 final createExpress = "catalog/createExpress";
+final createOddiy = "catalog/createOddiy";
+final addInfoCreateProduct = "catalog/addInfoCreateProduct";
 
 }

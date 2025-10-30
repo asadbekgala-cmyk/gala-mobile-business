@@ -10,7 +10,9 @@ import 'package:gala_business/features/home/home_screen.dart';
 import 'package:gala_business/features/home/presentation/pages/notification.dart';
 import 'package:gala_business/features/instrument/detail_screen.dart';
 import 'package:gala_business/features/katalog/catalog_screen.dart';
+import 'package:gala_business/features/katalog/presentation/pages/add_info_create_product.dart';
 import 'package:gala_business/features/katalog/presentation/pages/create_express.dart';
+import 'package:gala_business/features/katalog/presentation/pages/create_product.dart';
 import 'package:gala_business/features/navigation/navigation_screen.dart';
 import 'package:gala_business/main.dart';
 import 'package:go_router/go_router.dart';
@@ -80,6 +82,20 @@ class AppRouter {
                     name: AppRouteName().createExpress,
                     builder: (context, state) => CreateExpressScreen(),
                   ),
+                  GoRoute(
+                    parentNavigatorKey: navigatorKey,
+                    path: AppRouteName().createOddiy,
+                    name: AppRouteName().createOddiy,
+                    builder: (context, state) => CreateProduct(),
+                    routes: [
+                      GoRoute(
+                        parentNavigatorKey: navigatorKey,
+                        path: AppRouteName().addInfoCreateProduct,
+                        name: AppRouteName().addInfoCreateProduct,
+                        builder: (context, state) => AddInfoCreateProduct(),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ],
@@ -98,6 +114,15 @@ class AppRouter {
               GoRoute(
                 path: AppRouteName().detail,
                 name: AppRouteName().detail,
+                builder: (context, state) => DetailScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: <RouteBase>[
+              GoRoute(
+                path: "sss",
+                name: "sss",
                 builder: (context, state) => DetailScreen(),
               ),
             ],

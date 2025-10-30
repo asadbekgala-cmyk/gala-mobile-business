@@ -32,6 +32,12 @@ class AppIcons {
   final light = "assets/icons/catalog/light.svg";
   final box = "assets/icons/catalog/box.svg";
   final addImage = "assets/icons/catalog/add_image.svg";
+  final lock = "assets/icons/catalog/lock.svg";
+  final danger = "assets/icons/catalog/danger.svg";
+  final add = "assets/icons/catalog/add.svg";
+  final photoPrints = "assets/icons/catalog/photo_prints.svg";
+  final solarGalleryBold = "assets/icons/catalog/solar_gallery_bold.svg";
+  final famiconsCamera = "assets/icons/catalog/famicons_camera.svg";
  
 
 
