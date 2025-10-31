@@ -6,6 +6,8 @@ class AppRouteName {
 
 
   final orders = '/orders';
+  final accseptOrder = 'orders/AccseptOrders';
+  final moderation = 'orders/moderation';
 
 
 

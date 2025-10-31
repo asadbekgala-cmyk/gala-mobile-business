@@ -38,6 +38,13 @@ class AppIcons {
   final photoPrints = "assets/icons/catalog/photo_prints.svg";
   final solarGalleryBold = "assets/icons/catalog/solar_gallery_bold.svg";
   final famiconsCamera = "assets/icons/catalog/famicons_camera.svg";
+
+
+
+
+  final messages = "assets/icons/order/messages.svg";
+  final component = "assets/icons/order/component.svg";
+  final undov = "assets/icons/order/!.svg";
  
 
 

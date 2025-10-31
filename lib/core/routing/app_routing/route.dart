@@ -6,13 +6,15 @@ import 'package:gala_business/core/config/app_constants.dart';
 import 'package:gala_business/core/routing/route_nemas/route_names.dart';
 import 'package:gala_business/core/services/service_locator.dart';
 import 'package:gala_business/features/buyurtmalar/order_screen.dart';
+import 'package:gala_business/features/buyurtmalar/presentation/page/accsept_order.dart';
+import 'package:gala_business/features/buyurtmalar/presentation/page/moderation.dart';
 import 'package:gala_business/features/home/home_screen.dart';
 import 'package:gala_business/features/home/presentation/pages/notification.dart';
 import 'package:gala_business/features/instrument/detail_screen.dart';
-import 'package:gala_business/features/katalog/catalog_screen.dart';
-import 'package:gala_business/features/katalog/presentation/pages/add_info_create_product.dart';
-import 'package:gala_business/features/katalog/presentation/pages/create_express.dart';
-import 'package:gala_business/features/katalog/presentation/pages/create_product.dart';
+import 'package:gala_business/features/catalog/catalog_screen.dart';
+import 'package:gala_business/features/catalog/presentation/pages/add_info_create_product.dart';
+import 'package:gala_business/features/catalog/presentation/pages/create_express.dart';
+import 'package:gala_business/features/catalog/presentation/pages/create_product.dart';
 import 'package:gala_business/features/navigation/navigation_screen.dart';
 import 'package:gala_business/main.dart';
 import 'package:go_router/go_router.dart';
@@ -106,6 +108,20 @@ class AppRouter {
                 path: AppRouteName().orders,
                 name: AppRouteName().orders,
                 builder: (context, state) => OrderScreen(),
+                routes: [
+                  GoRoute(
+                    parentNavigatorKey: navigatorKey,
+                    path: AppRouteName().accseptOrder,
+                    name: AppRouteName().accseptOrder,
+                    builder: (context, state) => AccseptOrderScreen(),
+                  ),
+                   GoRoute(
+                    parentNavigatorKey: navigatorKey,
+                    path: AppRouteName().moderation,
+                    name: AppRouteName().moderation,
+                    builder: (context, state) => ModerationScreen(),
+                  ),
+                ],
               ),
             ],
           ),

@@ -41,5 +41,4 @@ flutter:
     - assets/icons/navigation/
     - assets/icons/home/
     - assets/icons/catalog/
-    - assets/icons/profil/vet_order/
-    - assets/icons/filter/
+    - assets/icons/order/
